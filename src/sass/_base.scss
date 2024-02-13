@@ -1,0 +1,107 @@
+// Background Color
+$primary-background: #020617;
+$secondary-background: #112240;
+
+// Text Color
+$primary-text: #ccd6f6;
+$secondary-text: #8892b0;
+$tertiary-text: #64ffda;
+$link-text: hsl(200 calc(1 *100%) 49.4% /1);
+$link-text-dark: rgb(24, 119, 242);
+$error-text: #e50914;
+$error-text-dark: #b60811;
+
+// Button
+$primary-button: #209eec;
+$primary-button-hover: #1084cb;
+$secondary-button: rgb(239, 239, 239);
+$secondary-button-hover: rgb(219, 219, 219);
+$tertiary-button: rgb(21, 17, 17);
+$tertiary-button-hover: #191717;
+
+// Hover 
+$hover-overlay: rgba(0, 0, 0, .05);
+
+// Popup Background
+$popup-bg: rgba(0, 0, 0, .65);
+$popup-bg-light: rgba(0, 0, 0, .3);
+
+// Border
+$border-main: rgb(219, 219, 219);
+$border-light: rgb(235, 235, 235);
+
+// Font Family
+$primary-font: "Raleway", "sans-serif";
+$primary-font-light: "Roboto", "sans-serif";
+$fancy-font: "Kalam", cursive;
+$large-font: "Montserrat", "sans-serif";
+
+// Responsive Breakpoints 
+$bp-extra-large: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-extra-small: 25em; // 400px
+
+:root {
+    color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-extra-large) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: 31.25em) {
+        font-size: 45%;
+    }
+}
+
+body {
+    background-color: $primary-background;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 120rem) 1fr;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr minmax(min-content, 90rem) 1fr;
+    }
+
+    @media only screen and (max-width: 46.875em) {
+        grid-template-columns: 1fr minmax(min-content, 70rem) 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr minmax(min-content, 60rem) 1fr;
+    }
+
+    &__sections {
+        grid-column: 2 / 3;
+    }
+}

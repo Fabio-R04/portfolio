@@ -1,0 +1,89 @@
+.navbar {
+    height: 8rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba($color: $primary-background, $alpha: 0.85);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 120rem) 1fr;
+
+    @media only screen and (max-width: $bp-large) {
+        max-height: 228px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__dropdown {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 3rem;
+
+        &-link {
+            font-family: "Jost", sans-serif;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &__content {
+        grid-column: 2 / 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            border-bottom: 1px solid #10213a;
+            min-height: 8rem;
+            height: 8rem;
+            padding: 0 3rem;
+
+            svg:nth-child(2) {
+                height: 3rem;
+                width: 3rem;
+                user-select: none;
+                cursor: pointer;
+
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &__brand {
+        font-family: $fancy-font;
+        font-size: 2.88rem;
+        color: white;
+        text-decoration: none;
+
+        span {
+            color: $primary-text;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        &-link {
+            text-decoration: none;
+            font-family: "Jost", sans-serif;
+            font-size: 1.8rem;
+            color: white;
+            transition: all .2s;
+
+            &:hover {
+                color: #00d5ff;
+            }
+        }
+    }
+}

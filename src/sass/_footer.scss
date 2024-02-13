@@ -1,0 +1,89 @@
+.footer {
+    height: 9rem;
+    width: 100%;
+    border-top: 1px solid #10213a;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 120rem) 1fr;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr;
+    }
+
+    &__content {
+        grid-column: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: 1 / -1;
+            padding: 0 3rem;
+        }
+
+        @media only screen and (max-width: $bp-extra-small) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        &-copyright {
+            font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $secondary-text;
+        }
+
+        // &-divider {
+        //     height: 3rem;
+        //     width: 1px;
+        //     background-color: #10213a;
+        // }
+
+        // &-email {
+        //     display: flex;
+        //     align-items: center;
+        //     gap: 1rem;
+
+        //     svg {
+        //         height: 2rem;
+        //         width: 2rem;
+
+        //         path {
+        //             fill: $secondary-text;
+        //         }
+        //     }
+
+        //     p {
+        //         font-family: DM sans, sans-serif;
+        //         font-size: 1.4rem;
+        //         color: $secondary-text;
+        //     }
+        // }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        &-link {
+
+            svg {
+                height: 2.5rem;
+                width: 2.5rem;
+                fill: $secondary-text;
+                transition: all .2s;
+
+                &:hover {
+                    fill: $primary-text;
+                }
+            }
+        }
+    }
+}

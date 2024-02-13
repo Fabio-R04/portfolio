@@ -1,0 +1,25 @@
+.section-header {
+    max-width: 53rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+
+    &__index {
+        font-family: $fancy-font;
+        font-size: 2rem;
+        color: $secondary-text;
+    }
+
+    &__title {
+        font-family: $primary-font;
+        font-size: 4rem;
+        color: $primary-text;
+    }
+
+    &__line {
+        flex: 1;
+        align-self: center;
+        height: 1px;
+        background-color: #10213a;
+    }
+}

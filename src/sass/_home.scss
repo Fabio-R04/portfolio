@@ -1,0 +1,98 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-large) {
+        justify-content: center;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+
+        @media only screen and (max-width: $bp-large) {
+            text-align: center;
+        }
+
+        &-greeting {
+            font-size: 4.5rem;
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            color: #00d5ff;
+        }
+
+        &-name {
+            font-size: 8.5rem;
+            font-family: 'Jost', sans-serif;
+            font-weight: 500;
+            color: white;
+
+            // span {
+            //     color: #abbfff;
+            // }
+        }
+
+        &-dev {
+            font-size: 3.2rem;
+            font-family: 'Jost', sans-serif;
+            color: #00a9d2;
+        }
+
+        &-description {
+            margin: 3rem 0;
+            // font-family: $primary-font-light;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 2.3rem;
+            color: $secondary-text;
+        }
+
+        &-interaction {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @media only screen and (max-width: $bp-large) {
+                margin: 0 auto;
+            }
+
+            &__portfolio {
+                margin-right: .5rem;
+                text-decoration: none;
+                border-radius: 3rem;
+                padding: 2rem 5rem;
+                background-color: $primary-text;
+                font-family: $primary-font;
+                font-size: 1.8rem;
+                color: $primary-background;
+                transition: all .2s;
+
+                &:hover {
+                    background-color: rgba(204, 214, 246, 0.8);
+                }
+            }
+
+            svg {
+                height: 3.5rem;
+                width: 3.5rem;
+                fill: white;
+                cursor: pointer;
+                transition: all .2s;
+
+                &:hover {
+                    fill: $secondary-text;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        div:nth-child(2) {
+            display: none;
+        }
+    }
+}
