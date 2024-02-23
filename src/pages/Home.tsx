@@ -43,7 +43,9 @@ function Home({ homeRef }: HomeProps) {
                         smooth
                     >Portfolio</Link>
                     <LinkedInIcon />
-                    <GithubIcon />
+                    <GithubIcon
+                        onClick={() => window.open("https://github.com/Fabio-R04", "_blank")?.focus()}
+                    />
                 </div>
             </div>
             <Lottie
