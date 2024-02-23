@@ -22,7 +22,7 @@ function Footer() {
                         <LinkedInIcon />
                     </Link>
                     <Link
-                        to="https://www.github.com/"
+                        to="https://github.com/Fabio-R04"
                         target="_blank"
                         className="footer__links-link"
                     >
