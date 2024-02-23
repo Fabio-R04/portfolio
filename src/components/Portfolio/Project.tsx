@@ -1,5 +1,5 @@
 import React from "react";
-import { projectImageHT } from "../../reusable";
+import { projectImageHT, projectUrlHT } from "../../reusable";
 import GithubIcon from "../Home/svg/GithubIcon";
 import CodeIcon from "../About/svg/CodeIcon";
 
@@ -11,6 +11,10 @@ interface ProjectProps {
 }
 
 function Project({ projectName, projectDescription, technologies, swap }: ProjectProps) {
+    const handleNavigation = (url: string): void => {
+        window.open(url, "_blank")?.focus();
+    }
+
     return (
         <div className="portfolio__project">
             {(swap === true) && (
@@ -44,11 +48,17 @@ function Project({ projectName, projectDescription, technologies, swap }: Projec
                 <div style={{
                     ...(swap) && { marginLeft: "auto" }
                 }} className="portfolio__project-content__links">
-                    <button className="portfolio__project-content__links-live">
+                    <button
+                        onClick={() => handleNavigation(projectUrlHT[projectName].live)}
+                        className="portfolio__project-content__links-live"
+                    >
                         Live Demo
                         <GithubIcon />
                     </button>
-                    <button className="portfolio__project-content__links-code">
+                    <button
+                        onClick={() => handleNavigation(projectUrlHT[projectName].github)}
+                        className="portfolio__project-content__links-code"
+                    >
                         Code
                         <CodeIcon />
                     </button>

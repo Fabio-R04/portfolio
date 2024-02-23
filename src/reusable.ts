@@ -17,3 +17,22 @@ export const projectImageHT: Record<string, any> = {
     "Shopsmart": require("./assets/images/porfolio/shopsmart.png"),
     "Discord Clone": require("./assets/images/porfolio/discord-clone.png")
 }
+
+export const projectUrlHT: { [key: string]: { github: string; live: string; } } = {
+    "Twitter Clone": {
+        github: "https://github.com/Fabio-R04/twitter-clone",
+        live: "https://twitter-clone-r04.netlify.app"
+    },
+    "Movierv": {
+        github: "https://github.com/Fabio-R04/movierv-app",
+        live: "https://movierv.netlify.app"
+    },
+    "Shopsmart": {
+        github: "https://github.com/Fabio-R04/shopsmart-ecommerce-app",
+        live: "https://shopsmart-store.netlify.app"
+    },
+    "Discord Clone": {
+        github: "https://github.com/Fabio-R04/discord-clone",
+        live: "https://discord-clone-r04.netlify.app"
+    }
+}
